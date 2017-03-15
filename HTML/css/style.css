@@ -85,12 +85,39 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #cabcab;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*-----------  Nav section  -----------*/
+
+
+#page{
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  padding-top: 0em !important;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+/*.fh5co-nav .img-responsive{
+  display: block;
+  max-width: 100%;
+  height: 100%;
+}*/
+
+
 .fh5co-nav {
-  position: fixed;
-  top: 0;
+  /*position: fixed;*/
+  /*top: 0;*/
   left: 0;
   right: 0;
-  padding: 25px 0;
+  /*padding: 25px 0;*/
   z-index: 1;
   background: #edebe8;
 }
@@ -99,28 +126,54 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 20px 0;
   }
 }
-.fh5co-nav .fh5co-top-logo,
-.fh5co-nav .fh5co-top-menu,
-.fh5co-nav .fh5co-top-social {
+
+
+/*.fh5co-nav .fh5co-top-logo,*/
+.fh5co-nav .fh5co-top-menu,{
   float: left;
 }
-.fh5co-nav .fh5co-top-logo {
-  width: 20%;
+.fh5co-nav .fh5co-top-social {
+  float: right;
 }
+
+/*
 .fh5co-nav .fh5co-top-menu {
   width: 60%;
 }
 .fh5co-nav .fh5co-top-social {
   width: 20%;
+}*/
+
+.container-fluid.hideCustom {
+  padding-left: 0;
+  padding-right: 0;
 }
+
+.fh5co-top-logo {
+  position: relative;
+}
+
 .fh5co-nav #fh5co-logo {
-  font-size: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Montserrat", Arial, sans-serif;
 }
+
+.fh5co-nav #fh5co-logo a{
+  font-size: 135px;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-nav #fh5co-logo a {
+    font-size: 35px;
+  }
+}
+
 .fh5co-nav .fh5co-social {
   margin: 3px 0 0 0;
   padding: 0;
@@ -142,6 +195,7 @@ h1, h2, h3, h4, h5, h6, figure {
     display: none;
   }
 }
+
 .fh5co-nav .menu-2 li.search {
   float: left;
   width: 83%;
@@ -195,9 +249,10 @@ h1, h2, h3, h4, h5, h6, figure {
   font-family: "Montserrat", Arial, sans-serif;
 }
 .fh5co-nav ul li a {
+  display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 12px;
+  font-size: 15px;
   padding: 30px 10px;
   color: rgba(0, 0, 0, 0.9);
   -webkit-transition: 0.5s;
@@ -275,6 +330,9 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
 }
 
+/*-----------  Nav section finisish  -----------*/
+/*-----------  about section start  -----------*/
+
 .about-content {
   margin-bottom: 7em;
 }
@@ -337,6 +395,8 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-social-icons li a i {
   font-size: 20px;
 }
+/*-----------  about section finisish  -----------*/
+/*-----------  contact section start -----------*/
 
 .fh5co-contact-info ul {
   padding: 0;
@@ -380,6 +440,8 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 23px;
   content: "\e9af";
 }
+/*-----------  contact section finisish  -----------*/
+/*-----------  bg section  -----------*/
 
 .fh5co-bg-section {
   background: rgba(0, 0, 0, 0.05);
@@ -452,9 +514,29 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+/*-----------  bg section finisish  -----------*/
+/*-----------  work section  -----------*/
+
 .work {
   margin-bottom: 40px;
 }
+
+.top-line.animate-box {
+     padding-bottom: 4em; 
+}
+
+@media screen and (max-width: 768px) {
+  .top-line.animate-box {
+     padding-bottom: 2em; 
+
+}
+}
+
+.desc.animate-box.hideCustom {
+  padding-left: 0px; 
+  padding-right: 50px;
+}
+
 .work .work-grid {
   background-size: cover;
   background-position: center center;
@@ -551,14 +633,20 @@ h1, h2, h3, h4, h5, h6, figure {
     line-height: 45px;
   }
 }
-.intro h2 .fh5co-highlight {
-  display: block;
+
+span.fh5co-highlight {
+  width: 100%;
+  text-align: right;
+  display: inline-block; 
   font-size: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-.intro h2 .fh5co-highlight i {
+
+/*.intro h2 .fh5co-highlight i {
   position: relative;
   top: 1px;
-}
+}*/
 
 .fh5co-heading {
   margin-bottom: 5em;
@@ -601,17 +689,31 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+/*-----------  news section finisish  -----------*/
+/*-----------  style section  -----------*/
+
 .author {
-  width: 100%;
+  width: 94%;
+  margin-left: 3%;
+  margin-right: 3%;
   float: left;
   margin-bottom: 5em;
 }
+
+@media screen and (max-width: 480px) {
+  .author {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .author .author-inner {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
-  width: 40%;
+  width: 60%;
   height: 350px;
   float: left;
 }
@@ -622,10 +724,11 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 .author .desc {
-  width: 60%;
+  width: 40%;
   float: left;
   padding-left: 50px;
 }
+
 @media screen and (max-width: 480px) {
   .author .desc {
     width: 100%;
@@ -665,21 +768,56 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #cabcab !important;
 }
 
+/*-----------  author section finisish  -----------*/
+/*-----------  BLOG section in main section  -----------*/
+
 #fh5co-started {
   background: #cabcab;
 }
 #fh5co-started .fh5co-heading {
   margin-bottom: 20px !important;
 }
-#fh5co-started .fh5co-heading h2 {
+/*#fh5co-started .fh5co-heading h2 {
   color: #fff;
   color: #685641;
   margin-bottom: 20px !important;
+}*/
+
+#fh5co-started .fh5co-heading h3{
+  color: #fff;
+  color: #685641;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
+
 #fh5co-started .fh5co-heading p {
   color: #685641;
 }
-#fh5co-started .btn {
+
+/*@media screen and (max-width: 768px) {
+  #home .main_text_big {
+    display: none;
+  }
+
+  #home .main_text_small {
+    display: block; 
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #dcbb91;
+  }
+}*/
+
+@media screen and (max-width: 768px) {
+  #fh5co-started .hideCustom {
+    display: block; 
+  }
+  #fh5co-started .text-center.animate-box {
+    display: none;
+  }
+}
+
+/*#fh5co-started .btn {
   margin-top: 20px;
   border: 3px solid #8c7961;
   color: #8c7961;
@@ -688,16 +826,34 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 20px 0;
   padding-left: 70px;
   padding-right: 70px;
-}
+}*/
+/*
 #fh5co-started .btn:hover {
   background: #8c7961 !important;
   border: 3px solid #8c7961 !important;
   color: #fff;
-}
+}*/
+
+/*-----------  #fh5co-started section finisish  -----------*/
+/*-----------  fh5co-footer section  -----------*/
 
 #fh5co-footer {
   background: #efefef;
 }
+
+#fh5co-footer #fh5co-logo{
+  border-bottom: 1px solid #888;
+}
+
+#fh5co-footer #fh5co-logo a{
+  vertical-align: bottom;
+  font-size: 70px;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
 #fh5co-footer .fh5co-footer-links {
   padding: 0;
   margin: 0;
@@ -729,9 +885,41 @@ h1, h2, h3, h4, h5, h6, figure {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-#fh5co-footer .copyright .block {
+#fh5co-footer .copyright_big .block {
   display: block;
 }
+
+#fh5co-footer .copyright_big .col-xs-6.col-sm-6{
+  padding-top: 34px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#fh5co-footer .copyright_big .fh5co-social-icons{
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  #fh5co-footer .copyright_big {
+    display: block;
+  }
+  #fh5co-footer .copyright_small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #fh5co-footer .copyright_big {
+    display: none;
+  }
+  #fh5co-footer .copyright_small {
+    display: block;
+    text-align: center;
+  }
+}
+
+/*-----------  footer section finisish  -----------*/
+/*-----------  fh5co-offcanvas section  -----------*/
 
 #fh5co-offcanvas {
   position: absolute;
@@ -934,6 +1122,8 @@ h1, h2, h3, h4, h5, h6, figure {
   text-decoration: none;
   outline: none;
 }
+/*-----------  offset section finisish  -----------*/
+/*-----------  fh5co-nav-toggle section  -----------*/
 
 .fh5co-nav-toggle {
   width: 25px;
@@ -1037,6 +1227,8 @@ h1, h2, h3, h4, h5, h6, figure {
     display: block;
   }
 }
+/*-----------  toggle section finisish  -----------*/
+/*-----------  .btn section  -----------*/
 
 .btn {
   margin-right: 4px;
@@ -1198,6 +1390,8 @@ h1, h2, h3, h4, h5, h6, figure {
   opacity: 1;
 }
 
+/*-----------  Form section  -----------*/
+
 .form-control {
   box-shadow: none;
   background: transparent;
@@ -1273,6 +1467,8 @@ blockquote .person cite {
   position: relative;
   top: 3px;
 }
+/*-----------  botton section finisish  -----------*/
+/*-----------  Role section  -----------*/
 
 .role {
   margin-top: 2.5em;
