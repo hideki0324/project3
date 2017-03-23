@@ -11,11 +11,11 @@
 *
 * ======================================================= */
 body {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Furura", Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
-  color: #828282;
+  color: #000;
   background: #fff;
 }
 
@@ -48,13 +48,13 @@ body {
 }
 
 a {
-  color: #cabcab;
+  color: #000;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover, a:active, a:focus {
-  color: #cabcab;
+  color: #d4c8bb;
   outline: none;
   text-decoration: none;
 }
@@ -65,9 +65,12 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Futura", Arial, sans-serif;
   font-weight: 400;
   margin: 0 0 20px 0;
+}
+h2 {
+  text-decoration: underline;
 }
 
 ::-webkit-selection {
@@ -119,11 +122,13 @@ h1, h2, h3, h4, h5, h6, figure {
   right: 0;
   /*padding: 25px 0;*/
   z-index: 1;
-  background: #edebe8;
+  background: #ffe6e6;
 }
 @media screen and (max-width: 768px) {
   .fh5co-nav {
-    padding: 20px 0;
+    padding-bottom: 20px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
 
@@ -155,22 +160,35 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .fh5co-nav #fh5co-logo {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -35px;
+  left: 20;
   margin: 0;
   padding: 0;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Futura", Arial, sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-nav #fh5co-logo {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Futura", Arial, sans-serif;
+  }
 }
 
 .fh5co-nav #fh5co-logo a{
-  font-size: 135px;
+  font-size: 215px;
 }
 
 @media screen and (max-width: 768px) {
   .fh5co-nav #fh5co-logo a {
-    font-size: 35px;
+    font-size: 50px;
   }
 }
 
@@ -184,7 +202,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .fh5co-nav .fh5co-social li a {
   font-size: 20px;
-  color: rgba(0, 0, 0, 0.4);
+  /*color: rgba(0, 0, 0, 0.4);*/
+  color: #000;
 }
 .fh5co-nav a {
   padding: 5px 0;
@@ -246,21 +265,21 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
   list-style: none;
   display: inline-block;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Futura", Arial, sans-serif;
 }
 .fh5co-nav ul li a {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 15px;
-  padding: 30px 10px;
+  padding: 30px 17px;
   color: rgba(0, 0, 0, 0.9);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .fh5co-nav ul li a:hover, .fh5co-nav ul li a:focus, .fh5co-nav ul li a:active {
-  color: black;
+  color: #d4c8bb;
 }
 .fh5co-nav ul li.has-dropdown {
   position: relative;
@@ -388,7 +407,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: inline-block;
   zoom: 1;
   *display: inline;
-  color: #cabcab;
+  color: #000;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -440,11 +459,28 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 23px;
   content: "\e9af";
 }
+/*.form-group.hideCustom{
+  text-align: right;
+}
+.btn.btn-primary{
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .form-group.hideCustom {
+  text-align: center;
+  }
+  .btn.btn-primary {
+  display: block;
+  }
+}*/
+
 /*-----------  contact section finisish  -----------*/
 /*-----------  bg section  -----------*/
 
 .fh5co-bg-section {
-  background: rgba(0, 0, 0, 0.05);
+  /*background: rgba(0, 0, 0, 0.05);*/
+  background: #fff;
 }
 
 #fh5co-started,
@@ -452,10 +488,18 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-work,
 #fh5co-about,
 #fh5co-contact,
+#fh5co-locations,
+#fh5co-footer {
+  padding: 7em 0;
+  clear: both;
+  border-bottom: 0.5px #f2f2f2 solid;
+}
+
 #fh5co-footer {
   padding: 7em 0;
   clear: both;
 }
+
 @media screen and (max-width: 768px) {
   #fh5co-started,
   #fh5co-author,
@@ -466,6 +510,21 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 3em 0;
   }
 }
+
+#fh5co-work .desc h3{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+} 
+
+#fh5co-work .desc.hideCustom h3{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#fh5co-work .desc span{
+  font-size: 13px;
+} 
 
 .feature-center {
   float: left;
@@ -478,7 +537,7 @@ h1, h2, h3, h4, h5, h6, figure {
 .feature-center .icon {
   width: 90px;
   height: 90px;
-  background: #cabcab;
+  background: #000;
   display: table;
   text-align: center;
   margin-bottom: 30px;
@@ -513,6 +572,20 @@ h1, h2, h3, h4, h5, h6, figure {
     margin: 0 auto 30px auto;
   }
 }
+#fh5co-started span{
+  color: #000;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.5;
+  text-align: right;
+}
+
+#fh5co-started .col-md-4{
+  border-bottom: 1px solid #fff;
+}
+
+
+
 
 /*-----------  bg section finisish  -----------*/
 /*-----------  work section  -----------*/
@@ -523,6 +596,15 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .top-line.animate-box {
      padding-bottom: 4em; 
+}
+
+.col-md-4.text-center.animate-box{
+     padding-bottom: 1em; 
+}
+
+
+.col-md-6.col-xs-6.text-center.animate-box{
+  padding-bottom: 1em;
 }
 
 @media screen and (max-width: 768px) {
@@ -609,7 +691,7 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
 }
 .categories li {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Futura", Arial, sans-serif;
   list-style: none;
   margin-bottom: 5px;
 }
@@ -631,6 +713,10 @@ h1, h2, h3, h4, h5, h6, figure {
   .intro h2 {
     font-size: 30px;
     line-height: 45px;
+  }
+
+  span.fh5co-highlight.hideCustom {
+    text-align: center;
   }
 }
 
@@ -667,7 +753,7 @@ span.fh5co-highlight {
   font-size: 18px;
 }
 .fh5co-heading p {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.5;
   color: #828282;
 }
@@ -677,7 +763,7 @@ span.fh5co-highlight {
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 2px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Futura", Arial, sans-serif;
 }
 
 .title {
@@ -772,7 +858,7 @@ span.fh5co-highlight {
 /*-----------  BLOG section in main section  -----------*/
 
 #fh5co-started {
-  background: #cabcab;
+  background: #ffe6e6;
 }
 #fh5co-started .fh5co-heading {
   margin-bottom: 20px !important;
@@ -785,13 +871,13 @@ span.fh5co-highlight {
 
 #fh5co-started .fh5co-heading h3{
   color: #fff;
-  color: #685641;
+  color: #000;
   margin-top: 20px !important;
   margin-bottom: 20px !important;
 }
 
 #fh5co-started .fh5co-heading p {
-  color: #685641;
+  color: #000;
 }
 
 /*@media screen and (max-width: 768px) {
@@ -812,7 +898,7 @@ span.fh5co-highlight {
   #fh5co-started .hideCustom {
     display: block; 
   }
-  #fh5co-started .text-center.animate-box {
+  #fh5co-started .text-left.animate-box {
     display: none;
   }
 }
@@ -837,8 +923,43 @@ span.fh5co-highlight {
 /*-----------  #fh5co-started section finisish  -----------*/
 /*-----------  fh5co-footer section  -----------*/
 
+#fh5co-locations{
+  padding-top: 7em;
+}
+
+#fh5co-locations .block_lcation {
+  border-top: 1px solid #edebe8;
+  padding-top: 3em;
+  padding-bottom: 3em; 
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .block_lcation .location_map {
+    display: block;
+  }
+
+  .block_lcation .block_map {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .block_lcation .location_map {
+    display: block;
+  }
+  
+  .block_lcation .block_map {
+    display: none;
+  }
+}
+
+/*-----------  footer section finisish  -----------*/
+/*-----------  fh5co-footer section  -----------*/
+
 #fh5co-footer {
-  background: #efefef;
+  /*background: #efefef;*/
+  background:#ffe6e6;
 }
 
 #fh5co-footer #fh5co-logo{
@@ -851,7 +972,7 @@ span.fh5co-highlight {
   color: #000;
   text-transform: uppercase;
   font-weight: bold;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Futura", Arial, sans-serif;
 }
 
 #fh5co-footer .fh5co-footer-links {
@@ -1233,7 +1354,7 @@ span.fh5co-highlight {
 .btn {
   margin-right: 4px;
   margin-bottom: 4px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Futura", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   -webkit-border-radius: 2px;
@@ -1257,9 +1378,9 @@ span.fh5co-highlight {
 }
 
 .btn-primary {
-  background: #cabcab;
-  color: #fff;
-  border: 2px solid #cabcab;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background: #d4c8bb !important;
@@ -1267,11 +1388,11 @@ span.fh5co-highlight {
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #cabcab;
-  border: 2px solid #cabcab;
+  color: #000;
+  border: 1px solid #000;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #cabcab;
+  background: #d4c8bb;
   color: #fff;
 }
 
@@ -1446,14 +1567,14 @@ blockquote {
   border-left: none;
 }
 blockquote p {
-  font-family: "Georgia", Times;
+  font-family: "Futura", Times;
   font-style: italic;
   font-size: 20px;
   line-height: 1.5;
   color: #666666;
 }
 blockquote .person {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Futura", Arial, sans-serif;
   font-size: 14px;
   color: #b3b3b3;
 }
